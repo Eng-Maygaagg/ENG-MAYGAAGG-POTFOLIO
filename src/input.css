@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bg-color: #f0f0f0;
+    --bg-color-2: #e0e0e0;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --text-color-p: #555555;
+
+    --pri-text: #0A2647;
+    --sec-text: #144272;
+    --muted-text: #205295;
+    --disable-text: #cccccc;
+
+    --btn-bg: #2C74B3;
+    --btn-txt: #ffffff;
+
+    --hover-color: #205295;
+    --active-color: #144272;
+
+    --pri-border: #cccccc;
+    --sec-border: #205295;
+    --focus-color: #2C74B3;
+
+    --grideint-color-1: #2C74B3;
+    --grideint-color-2: #0A2647;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0A2647;
+    --bg-color-2: #205295;
+    --card-color: #144272;
+    --text-color: #FFFFFF;
+    --text-color-p: #cccccc;
+
+    --pri-text: #FFFFFF;
+    --sec-text: #f0f0f0;
+    --muted-text: #cccccc;
+    --disable-text: #205295;
+
+    --btn-bg: #2C74B3;
+    --btn-txt: #ffffff;
+
+    --hover-color: #205295;
+    --active-color: #144272;
+
+    --pri-border: #205295;
+    --sec-border: #2C74B3;
+    --focus-color: #2C74B3;
+
+    --grideint-color-1: #f0f0f0;
+    --grideint-color-2: #FFFFFF;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+.body {
+    background: var(--bg-color);
+}
+header {
+    background: var(--card-color);
+}
+.link {
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+.link:hover {
+    color: var(--focus-color);
+}
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--focus-color);
+    transition: width 0.3s;
+}
+.link:hover::after {
+    width: 100%;
+}
+footer {
+    background: var(--card-color);
+    color: var(--text-color);
+}
+footer .sendEmail > button{
+    background-color: var(--btn-bg);
+    color: var(--btn-txt);
+}
+footer .sendEmail > button:hover {
+    background-color: var(--hover-color);
+}
+.inforSide > h3 {
+    color: var(--muted-text);
+}
+.inforSide > h1 {
+    color: var(--pri-text);
+}
+.inforSide > h2 {
+    color: var(--sec-text);
+}
+.inforSide > p {
+    color: var(--text-color-p);
+}
+.inforSide > .btns > button {
+    background-color: var(--btn-bg);
+    color: var(--btn-txt);
+}
+.inforSide > .btns > button:last-child {
+    border: 1px solid var(--btn-bg);
+    background: transparent;
+    color: var(--btn-bg);
+}
+.inforSide > .btns > button:last-child:hover {
+    background-color: var(--btn-bg);
+    color: var(--btn-txt);
+}
+.inforSide > .btns > button:hover {
+    background-color: var(--hover-color);
+}
+
+span {
+    color: var(--focus-color);
+}
+.iamgeSide > img {
+    border-color: var(--pri-border);
+}
+.iamgeSide > .grediant_bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 305px;
+    height: 395px;
+    position: relative;
+    overflow: hidden;
+    /* background: var(--focus-color); */
+}
+.iamgeSide > .grediant_bg::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 70%;
+    background: radial-gradient(var(--grideint-color-1), var(--grideint-color-2));
+    animation: rotate 6s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.social_media > img {
+    position: relative;
+}
+.social_media > span {
+    background: var(--pri-text);
+    opacity: 60%;
+    border-radius: 50%;
+    width: 1.5px;
+}
+.Skills_Review {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: var(--bg-color-2);
+    padding: 40px;
+    position: relative;
+}
+.Skills_Review > h2 {
+    color: var(--pri-text);
+}
+.Skills_Review > .skills_container {
+    background: var(--card-color);
+}
+.Skills_Review > .skills_container > .card {
+    background: var(--bg-color);
+    cursor: pointer;
+}
+.Skills_Review > .skills_container > .card:hover  {
+    background: var(--hover-color);
+}
+.Skills_Review > .skills_container > .card > p {
+    color: var(--sec-text);
+}
+.Skills_Review > .skills_container > .card:hover > p {
+    color: #f0f0f0;
+}
+.preview_projects {
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+}
+.preview_projects > h2 {
+    color: var(--pri-text);
+}
+.projecs_container {
+    width: 80%;
+    height: auto;
+    background: var(--bg-color-2);
+    padding: 20px;
+}
+.projecs_container > img:nth-child(1) {
+    grid-column: span 2;
+}
+.projecs_container > img:nth-child(2) {
+    grid-row: span 2;
+}
+button {
+    background: var(--card-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
