@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import "animate.css";
+
 import MyPicture from "../assets/MyPicture.jpeg"
 import LinkedIn from "../assets/linkedin.png"
 import Facebook from "../assets/facebook.png"
@@ -16,37 +18,33 @@ import NodeJs from "../assets/node-js.png"
 import ExpressJs from "../assets/express-js.png"
 import MongoDB from "../assets/mongodb.png"
 import PHP from "../assets/php.png"
-import SQL from "../assets/sql-server.png"
 
 import project1 from "../assets/my_demo_site.png"
 import project2 from "../assets/app_project.jpg"
 import project3 from "../assets/portfolio_site.jpg"
 import project4 from "../assets/Dashboard.jpg"
 
-import dark_arrow_down from "../assets/dark-arrow-down.png"
-import light_arrow_down from "../assets/light-arrow-down.png"
-
 function HomePage() {
 
     return ( 
         <>
 
-        <section className="flex justify-around items-center w-full mt-7 h-dvh p-10">
+        <section  className="flex justify-around items-center w-full mt-7 h-dvh p-10">
             <div className="inforSide flex-2">
-                <h3 className="font-light">Wellcome to here,</h3>
-                <h1 className="font-bold text-3xl my-1.5"><span className="span">I'm</span> Cabdirahman Ibrahim Cali (<span> Eng Maygaagg </span>)</h1>
-                <h2 className="font-medium text-[22px]">Softwere Developer</h2>
-                <p className="font-light w-xl mt-1">A software developer who builds responsive web applications using JavaScript and React. 
+                <h3 className="font-light animate__animated animate__fadeInUp animate__delay-0.2s">Wellcome to here,</h3>
+                <h1 className="font-bold text-3xl my-1.5 animate__animated animate__fadeInUp animate__delay-0.4s"><span className="span">I'm</span> Cabdirahman Ibrahim Cali (<span> Eng Maygaagg </span>)</h1>
+                <h2 className="font-medium text-[22px] animate__animated animate__fadeInUp animate__delay-0.6s">Softwere Developer</h2>
+                <p className="font-light w-xl mt-1 animate__animated animate__fadeInUp animate__delay-0.8s">A software developer who builds responsive web applications using JavaScript and React. 
                 Focuses on clean, maintainable code and effective collaboration with designers and engineers. 
                 Enjoys solving complex problems and learning new technologies.
                 </p>
                 <div className="btns flex gap-6 mt-5">
-                    <button className="px-4 py-2 rounded cursor-pointer transition-all">Hire Me</button>
-                    <button className="px-4 py-2 rounded cursor-pointer transition-all">See Projects</button>
+                    <button className="px-4 py-2 rounded cursor-pointer transition-all animate__animated animate__fadeInUp animate__delay-0.9s">Hire Me</button>
+                    <button className="px-4 py-2 rounded cursor-pointer transition-all animate__animated animate__fadeInUp animate__delay-0.99s"><Link to='/projects'>See Projects</Link></button>
                 </div>
             </div>
-            <div className="iamgeSide flex-1">
-                <div className="grediant_bg rounded">
+            <div className="iamgeSide flex-1 animate__animated animate__fadeInUp animate__delay-1s">
+                <div className="grediant_bg rounded ">
                     <img className="ml-6 mr-5 z-10 rounded" width='300px' height='auto' src={MyPicture} alt="Me" />
                 </div>
             </div>
@@ -105,7 +103,7 @@ function HomePage() {
                 <p className="font-light">SQL Server</p>
             </div> */}
             <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
-                <Link to='/skills'>See more...</Link>
+                <Link to='/skills'><p className="semore_skills">See more...</p></Link>
             </div>
         </div>
     </section>
@@ -119,6 +117,7 @@ function HomePage() {
             <img src={project3} alt="" />
             <img src={project4} alt="" />
         </div>
+        <button className="mt-8 px-8 py-2 rounded shadow"><Link to='/projects'>See More Projects</Link></button>
     </section>
         </>
      );

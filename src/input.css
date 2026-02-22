@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('../src/assets/cubes.png');
+@import url('../src/assets/blue_cubes.png');
 
 :root {
     --bg-color: #f0f0f0;
@@ -12,6 +14,12 @@
     --sec-text: #144272;
     --muted-text: #205295;
     --disable-text: #cccccc;
+
+    --mirror-color: #ffffffa6;
+
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.25);
+    --glass-text: #205295;
 
     --btn-bg: #2C74B3;
     --btn-txt: #ffffff;
@@ -39,6 +47,12 @@
     --muted-text: #cccccc;
     --disable-text: #205295;
 
+    --mirror-color: #144172bf;
+
+    --glass-bg: rgba(0, 0, 0, 0.35);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-text: #ffffff;
+
     --btn-bg: #2C74B3;
     --btn-txt: #ffffff;
 
@@ -57,6 +71,9 @@ body {
 }
 .body {
     background: var(--bg-color);
+}
+.body > .Arrow_Down {
+    border: 1px solid var(--mirror-color);
 }
 header {
     background: var(--card-color);
@@ -78,6 +95,11 @@ header {
 }
 .link:hover::after {
     width: 100%;
+}
+@media width {
+    .link {
+        color: var(--disable-text);
+    }
 }
 footer {
     background: var(--card-color);
@@ -189,6 +211,9 @@ span {
 .Skills_Review > .skills_container > .card:hover > p {
     color: #f0f0f0;
 }
+.skills_container > .card .semore_skills {
+    color: var(--text-color);
+}
 .preview_projects {
     background: var(--bg-color);
     display: flex;
@@ -199,6 +224,13 @@ span {
 }
 .preview_projects > h2 {
     color: var(--pri-text);
+}
+.preview_projects > button {
+    background: var(--btn-bg);
+    color: var(--btn-txt);
+}
+.preview_projects > button:hover {
+    background-color: var(--hover-color);
 }
 .projecs_container {
     width: 80%;
@@ -218,4 +250,337 @@ button {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.card {
+    border: 1px solid var(--pri-border);
+    background: var(--card-color);
+}
+.card:hover {
+    border: 1px solid var(--focus-color);
+}
+.card > h3 {
+    color: var(--sec-text);
+}
+.about_hero > .main_txt > h2 {
+    color: var(--pri-text);
+}
+.about_hero > .main_txt > p {
+    color: var(--text-color-p);
+}
+.About_journey_sec > .top_part > h2 {
+    color: var(--pri-text);
+}
+.About_journey_sec > .top_part > p {
+    color: var(--text-color-p);
+}
+.About_journey_sec > .journey .card h3 {
+    color: var(--sec-text);
+} 
+.About_journey_sec > .journey .card p {
+    color: var(--text-color-p);
+}
+.About_journey_sec > .journey .card_hide {
+    background: var(--bg-color);
+}
+.About_journey_sec > .journey .center_part .line {
+    background: var(--pri-border);
+}
+.About_journey_sec > .journey .center_part .dot {
+    border: 2px solid var(--pri-border);
+    background: var(--card-color);
+}
+.About_journey_sec > .journey .center_part .dot > .d {
+    background: var(--bg-color-2);
+}
+.About_Focus_Gaol > h2 {
+    color: var(--pri-text);
+}
+.About_Focus_Gaol > .focus_Goal p {
+    color: var(--text-color-p);
+}
+.hero_skills  > .skills_hero_text {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--glass-text);
+}
+.hero_skills > .skills_hero_text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(100px);
+    background: var(--glass-bg);
+    z-index: -1;
+}
+.hero_skills  > .skills_hero_text > h2 {
+    color: var(--pri-text);
+}
+.hero_skills  > .skills_hero_text > p {
+    color: var(--sec-text);
+}
+.skills_container > h2 {
+    color: var(--pri-text);
+}
+.skills_container > .skills_cards > .top_part > h3 {
+    color: var(--sec-text);
+} 
+.skills_container > .skills_cards > .top_part > p {
+    color: var(--text-color-p);
+}
+.Contacts_sec1 > h2 {
+    color: var(--pri-text);
+}
+.Contacts_sec1 > .Form_Contacts form {
+    background: var(--card-color);
+}
+.Contacts_sec1 > .Form_Contacts > form > h2 {
+    color: var(--sec-text);
+}
+.Contacts_sec1 > .Form_Contacts form > .box > input, .Contacts_sec1 > .Form_Contacts form > .box > textarea {
+    background: var(--bg-color-2);
+    color: var(--text-color);
+    border: 1px solid var(--pri-border);
+}
+.Contacts_sec1 > .Form_Contacts form > .box > input:focus, .Contacts_sec1 > .Form_Contacts form > .box > textarea:focus {
+    border: 1px solid var(--focus-color);
+    outline: none;
+}
+.Contacts_sec1 > .Form_Contacts > form > .box > label {
+    color: var(--sec-text);
+}
+.Contacts_sec1 > .Form_Contacts form > button {
+    background: var(--btn-bg);
+    color: var(--btn-txt);
+}
+.Contacts_sec1 > .Form_Contacts > .contact_info .card > p {
+    color: var(--text-color-p);
+}
+.Contacts_sec1 > .Form_Contacts > .contact_info > p {
+    color: var(--pri-text);
+}
+.contacts_bottom > .contact_text, .contact_text_bg {
+    background: var(--mirror-color);
+}
+.contacts_bottom > .contact_text > h2 {
+    color: var(--pri-text);
+}
+.contacts_bottom > .contact_text > p {
+    color: var(--sec-text);
+}
+.contacts_bottom > .contact_text > button {
+    background: var(--btn-bg);
+    color: var(--btn-txt);
+}
+.contacts_bottom > .contact_text > button:hover {
+    background-color: var(--hover-color);
+}
+.Projects_hero {
+    background-image: url('../src/assets/My_project_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(80%);
+    position: relative;
+}
+.Projects_hero > .cover_bg {
+    background: var(--card-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    filter: opacity(0.5);
+}
+.Projects_hero > .Top_text > h2 {
+    color: var(--text-color);
+}
+.Projects_hero > .Top_text > p {
+    color: var(--text-color-p);
+}
+.Projects_hero > .Top_text {
+    background: var(--card-color);
+    border: 1.5px solid var(--pri-border);
+    z-index: 2;
+}
+.battern {
+    background-image: url('../src/assets/cubes.png');
+    opacity: 30%;
+}
+.battern_dark {
+    background-image: url('../src/assets/blue_cubes.png');
+    opacity: 100%;
+}
+.projects {
+    background: var(--bg-color-2);
+}
+.projects > h2 {
+    color: var(--pri-text);
+    margin: 20px 0 40px 0;
+}
+.projects > .projuct_container > .project_card p {
+    color: var(--text-color-p);
+}
+.projects > .projuct_container > .project_card button {
+    background: var(--btn-bg);
+    color: var(--btn-txt);
+}
+.projects > .projuct_container > .project_card button:hover {
+    background-color: var(--hover-color);
+}
+.Services > h2 {
+    color: var(--pri-text);
+}
+.Services > p {
+    color: var(--text-color-p);
+}
+.Services > .services_container > .service_sec > .line {
+    background: var(--pri-border);
+}
+.Services > .services_container > .service_sec > .line > .title {
+    background: var(--card-color);
+    color: var(--sec-text);
+    border: 2px solid var(--pri-border);
+}
+.Services > .services_container > .service_sec > .cards  .serv_top_part img {
+    background: var(--bg-color);
+    border: 1px solid var(--pri-border);
+}
+.Services > .services_container > .service_sec > .cards  .serv_top_part h2 {
+    color: var(--sec-text);
+}
+.Services > .services_container > .service_sec > .cards  .serv_top_part p {
+    color: var(--text-color-p);
+}
+.Services > .services_container > .service_sec > .cards  button {
+    background: var(--btn-bg);
+    color: var(--btn-txt);
+}
+.Services > .services_container > .service_sec > .cards  button:hover {
+    background-color: var(--hover-color);
+}
+.Profile_Contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    padding: 40px;
+    margin-top: 70px;
+    gap: 40px;
+}
+.Profile_Contact > .profile_re > img {
+    flex: 1;
+}
+.Profile_Contact > .Contact_re > .summery > h4 {
+    color: var(--sec-text);
+    font-size: medium;
+}
+.Profile_Contact > .Contact_re > .summery > h4 > .line {
+    background: var(--sec-text);
+    height: 1.5px;
+    width: 200px;
+}
+.Profile_Contact > .Contact_re > .summery > h1 {
+    color: var(--sec-text);
+    font-size: 36px;
+    margin: 5px 0;
+}
+.Profile_Contact > .Contact_re > .summery > p {
+    color: var(--text-color-p);
+    margin-bottom: 10px;
+}
+.Profile_Contact > .Contact_re > .summery > hr {
+    border: 1px solid var(--pri-border);
+}
+
+.Profile_Contact > .Contact_re > .Info_Contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+}
+.Profile_Contact > .Contact_re > .Info_Contact > .box > h3 {
+    color: var(--sec-text);
+}
+.Profile_Contact > .Contact_re > .Info_Contact > .box > p {
+    color: var(--text-color-p);
+}
+.Profile_Contact > .Contact_re > .btns_re {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.Profile_Contact > .Contact_re > .btns_re > button:first-child {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: var(--btn-bg);
+    color: var(--btn-txt);
+    transition: all 0.3s ease-in-out;
+}
+.Profile_Contact > .Contact_re > .btns_re > button:first-child:hover {
+    background-color: var(--hover-color);
+}
+.Profile_Contact > .Contact_re > .btns_re > button:last-child {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--btn-bg);
+    background: transparent;
+    color: var(--btn-bg);
+    transition: all 0.3s ease-in-out;
+}
+.Profile_Contact > .Contact_re > .btns_re > button:last-child:hover {
+    background-color: var(--btn-bg);
+    color: var(--btn-txt);
+}
+.Education_Experience {
+    display: flex;
+    background: var(--bg-color-2);
+    padding: 40px;
+    margin-top: 30px;
+    gap: 10px;
+}
+.Education_Experience > .Education, .Experience {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Education_Experience > .Education > .card {
+    background: var(--card-color);
+    border: 1px solid var(--pri-border);
+    padding: 20px;
+}
+.Education_Experience > .Education > .card > h2 {
+    color: var(--pri-text);
+}
+.Education_Experience > .Education > .card > h4 {
+    color: var(--sec-text);
+}
+.Education_Experience > .Education > .card > p {
+    color: var(--text-color-p);
+}
+.Education_Experience > .h-line {
+    background: var(--pri-border);
+    width: 5px;
+    height: 100%;
+    align-items: center;
+}
+.Education_Experience > .Experience > .card {
+    background: var(--card-color);
+    border: 1px solid var(--pri-border);
+    padding: 20px;
+}
+.Education_Experience > .Experience > .card > h2 {
+    color: var(--pri-text);
+}
+.Education_Experience > .Experience > .card > h4 {
+    color: var(--sec-text);
+}
+.Education_Experience > .Experience > .card > p {
+    color: var(--text-color-p);
 }

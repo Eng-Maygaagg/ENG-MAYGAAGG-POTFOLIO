@@ -4,9 +4,12 @@ import { Outlet } from 'react-router-dom';
 import Footer from './Components/Footer';
 import "./input.css"
 import dark_arrow_down from "./assets/dark-arrow-down.png"
+import light_arrow_down from "./assets/light-arrow-down.png"
+import { useTheme } from "./ThemeContext";
 
 function LayOut() {
     const [moveDown, setMoveDown] = useState(false);
+    const { theme, toggleTheme } = useTheme();
     
         function moveDown_Arrow() {
             setMoveDown(prev => {
@@ -25,9 +28,9 @@ function LayOut() {
     return ( 
         <>
         <div className='body flex flex-col transition-all scroll-auto h-auto'>
-            <button onClick={moveDown_Arrow} className="fixed z-50 right-5 bottom-5 p-2 rounded-full shadow">
-            <img className="w-7 h-auto" src={dark_arrow_down} alt="" />
-        </button>
+            <button onClick={moveDown_Arrow} className="Arrow_Down fixed z-50 right-5 bottom-5 p-2 rounded-full shadow">
+                <img className="w-7 h-auto" src={theme != 'dark' ? dark_arrow_down : light_arrow_down} alt="" />
+            </button>
             <header><Header /></header>
             <div>
                 <Outlet />

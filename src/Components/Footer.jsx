@@ -2,6 +2,8 @@ import React from 'react';
 import "../input.css"
 import { Link } from 'react-router-dom';
 
+import { useTheme } from "../ThemeContext";
+
 import dark_Logo from "../assets/My_logo-dark1.png"
 import light_Logo from "../assets/my_logo_light.png"
 import LinkedIn from "../assets/linkedin.png"
@@ -10,12 +12,13 @@ import Facebook from "../assets/facebook.png"
 import WhatsApp from "../assets/whatsapp.png"
 
 function Footer() {
+    const { theme, toggleTheme } = useTheme();
     return ( 
         <>
-            <footer className='w-full flex justify-center items-center p-8 transition-all text-center'>
+            <footer className='w-full flex justify-center items-center sticky bottom-0 p-8 transition-all text-center'>
                 <div className="logo_section flex flex-col items-start transition-all justify-center p-5 flex-1">
                     <div className="logo flex flex-col justify-center items-start transition-all">
-                        <img src={light_Logo} width="200px" height="auto" alt="logo" />
+                        <img src={theme != 'dark' ? light_Logo : dark_Logo} width="200px" height="auto" alt="logo" />
                         <p>Softwate Developer</p>
                     </div>
                     <h3 className='font-medium mt-6 transition-all'>Follow Me On:</h3>
@@ -33,7 +36,7 @@ function Footer() {
                         <Link className="link font-medium transition-all "  to='/about' >About</Link>
                         <Link className="link font-medium transition-all"  to='/skills' >Skills</Link>
                         <Link className="link font-medium transition-all"  to='/projects' >Projects</Link>
-                        <Link className="link font-medium transition-all"  to='/services' >Services</Link>
+                        {/* <Link className="link font-medium transition-all"  to='/services' >Services</Link> */}
                         <Link className="link font-medium transition-all"  to='/resume' >Resume</Link>
                         <Link className="link font-medium transition-all"  to='/contact' >Contacts</Link>
                     </nav>
