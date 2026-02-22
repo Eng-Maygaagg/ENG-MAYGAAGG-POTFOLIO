@@ -27,24 +27,9 @@ import dark_arrow_down from "../assets/dark-arrow-down.png"
 import light_arrow_down from "../assets/light-arrow-down.png"
 
 function HomePage() {
-    const [moveDown, setMoveDown] = useState(false);
-
-    function moveDown_Arrow() {
-        setMoveDown(prev => {
-            const next = !prev;
-            if (typeof window !== "undefined") {
-                const target = next ? window.innerHeight : 0;
-                window.scrollTo({ top: target, behavior: "smooth" });
-            }
-            return next;
-        });
-    }
 
     return ( 
         <>
-        <button onClick={moveDown_Arrow} className="fixed z-50 right-5 bottom-5 p-2 rounded-full shadow">
-            <img className="w-7 h-auto" src={dark_arrow_down} alt="" />
-        </button>
 
         <section className="flex justify-around items-center w-full mt-7 h-dvh p-10">
             <div className="inforSide flex-2">
