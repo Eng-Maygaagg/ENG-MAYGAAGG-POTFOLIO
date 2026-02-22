@@ -48,22 +48,22 @@ function ProjectsPage() {
     const { theme, toggleTheme } = useTheme();
     return ( 
         <>
-            <section className="Projects_hero flex flex-col items-center w-full h-lvh p-10">
+            <section className="Projects_hero flex flex-col items-center w-full min-h-lvh p-4 sm:p-6 md:p-10">
                 <div className="cover_bg"></div>
-                <div className="Top_text p-16 rounded shadow flex flex-col justify-center mt-32 items-center w-[800px] bg-cover bg-center bg-repeat">
-                    <h2 className='font-semibold text-2xl text-center mb-4 tracking-wider'>My Projects</h2>
-                    <p className='text-[16px] text-center tracking-wide'>These projects showcase my journey as a software developer, combining technical skills with creative problem-solving. 
+                <div className="Top_text p-4 sm:p-8 md:p-16 rounded shadow flex flex-col justify-center mt-24 sm:mt-28 md:mt-32 items-center w-full max-w-[800px] mx-4 bg-cover bg-center bg-repeat">
+                    <h2 className='font-semibold text-lg sm:text-xl md:text-2xl text-center mb-3 md:mb-4 tracking-wider'>My Projects</h2>
+                    <p className='text-sm sm:text-[16px] text-center tracking-wide'>These projects showcase my journey as a software developer, combining technical skills with creative problem-solving. 
                         I build scalable, responsive, and user-friendly applications using modern technologies like React, Node.js, and databases. 
                         Each project reflects how I turn ideas into real-world digital solutions and continuously improve my development approach.
                     </p>
                 </div>
             </section>
 
-            <section className='projects flex flex-col items-center w-full mb-10 p-10'>
-                <h2 className='font-semibold text-2xl tracking-wider text-center mb-8'>Projects</h2>
-                <div className="projuct_container w-[90%] grid grid-cols-2 gap-5">
+            <section className='projects flex flex-col items-center w-full mb-10 p-4 sm:p-6 md:p-10'>
+                <h2 className='font-semibold text-xl sm:text-2xl tracking-wider text-center mb-6 sm:mb-8'>Projects</h2>
+                <div className="projuct_container w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
 
-                     <div className="project_card flex flex-col col-span-2">
+                     <div className="project_card flex flex-col md:col-span-2">
                         <img src={DemoOne} alt="" />
                         <div className="project_info card flex flex-col p-10 w-full">
                             <h3 className='font-medium text-lg tracking-wider mb-1'><strong>Title:</strong> DemoOne</h3>
@@ -77,7 +77,7 @@ function ProjectsPage() {
                         </div>
                     </div>
 
-                    <div className="project_card flex flex-col row-span-2">
+                    <div className="project_card flex flex-col md:row-span-2">
                         <img src={mobile_app} alt="" />
                         <div className="project_info card flex flex-col p-10 w-full">
                             <h3 className='font-medium text-lg tracking-wider mb-1'><strong>Title:</strong> Mobile App</h3>
@@ -91,7 +91,7 @@ function ProjectsPage() {
                         </div>
                     </div>
 
-                    <div className="project_card flex flex-col col-span-1">
+                    <div className="project_card flex flex-col">
                         <img src={CMS} alt="" />
                         <div className="project_info card flex flex-col p-10 w-full">
                             <h3 className='font-medium text-lg tracking-wider mb-1'><strong>Title:</strong> Contact Managment System</h3>
@@ -104,7 +104,7 @@ function ProjectsPage() {
                         </div>
                     </div>
 
-                    <div className="project_card flex flex-col col-span-1">
+                    <div className="project_card flex flex-col">
                         <img src={Portfolio} alt="" />
                         <div className="project_info card flex flex-col p-10 w-full">
                             <h3 className='font-medium text-lg tracking-wider mb-1'><strong>Title:</strong> Portfolio Website</h3>
@@ -121,18 +121,18 @@ function ProjectsPage() {
                 </div>
             </section>
 
-            <section className="Services flex flex-col items-center w-full px-10 mb-5">
-                <h2 className='font-semibold text-2xl tracking-wider transition-all'>My Services</h2>
+            <section className="Services flex flex-col items-center w-full px-4 sm:px-6 md:px-10 mb-5">
+                <h2 className='font-semibold text-xl sm:text-2xl tracking-wider transition-all text-center'>My Services</h2>
                 
-                <div className="services_container flex flex-col mt-10 p-10 gap-28 transition-all">
+                <div className="services_container flex flex-col mt-8 sm:mt-10 p-4 sm:p-6 md:p-10 gap-16 sm:gap-20 md:gap-28 transition-all w-full max-w-5xl">
                     
                     {/* services one */}
                     <div className="service_sec flex flex-col justify-center items-start w-full">
                         <span className='line w-6xl h-0.5 bg-amber-200 relative transition-all'><h3 className='title absolute text-center transition-all -top-4 px-2 left-5 rounded font-medium text-lg bg-amber-50'>Development</h3></span>
-                        <div className="cards grid grid-cols-2 mt-10 transition-all gap-5">
+                        <div className="cards grid grid-cols-1 md:grid-cols-2 mt-8 sm:mt-10 transition-all gap-4 sm:gap-5">
                             {/* card 1 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_fullStack : light_fullStack} alt="" />
                                     {/* right_side */}
@@ -147,7 +147,7 @@ function ProjectsPage() {
 
                             {/* card 2 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_front_end : light_front_end} alt="" />
                                     {/* right_side */}
@@ -162,7 +162,7 @@ function ProjectsPage() {
 
                             {/* card 3 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_back_end : light_back_end} alt="" />
                                     {/* right_side */}
@@ -180,10 +180,10 @@ function ProjectsPage() {
                     {/* services two */}
                     <div className="service_sec flex flex-col justify-center items-start w-full">
                         <span className='line w-6xl h-0.5 bg-amber-200 relative transition-all'><h3 className='title absolute text-center transition-all -top-4 px-2 left-5 rounded font-medium text-lg bg-amber-50'>Engineering</h3></span>
-                        <div className="cards grid grid-cols-2 mt-10 transition-all gap-5">
+                        <div className="cards grid grid-cols-1 md:grid-cols-2 mt-8 sm:mt-10 transition-all gap-4 sm:gap-5">
                             {/* card 1 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_database : light_database} alt="" />
                                     {/* right_side */}
@@ -198,7 +198,7 @@ function ProjectsPage() {
 
                             {/* card 2 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_Autho : light_Autho} alt="" />
                                     {/* right_side */}
@@ -213,7 +213,7 @@ function ProjectsPage() {
 
                             {/* card 3 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_Optimasion : light_Optimasion} alt="" />
                                     {/* right_side */}
@@ -231,10 +231,10 @@ function ProjectsPage() {
                     {/* service tree */}
                     <div className="service_sec flex flex-col justify-center items-start w-full">
                         <span className='line w-6xl h-0.5 bg-amber-200 relative transition-all'><h3 className='title absolute text-center transition-all -top-4 px-2 left-5 rounded font-medium text-lg bg-amber-50'>Optimization & Deployment</h3></span>
-                        <div className="cards grid grid-cols-2 mt-10 transition-all gap-5">
+                        <div className="cards grid grid-cols-1 md:grid-cols-2 mt-8 sm:mt-10 transition-all gap-4 sm:gap-5">
                             {/* card 1 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_EditCode : light_EditCode} alt="" />
                                     {/* right_side */}
@@ -249,7 +249,7 @@ function ProjectsPage() {
 
                             {/* card 2 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_hosting : light_hosting} alt="" />
                                     {/* right_side */}
@@ -264,7 +264,7 @@ function ProjectsPage() {
 
                             {/* card 3 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_Mantanence : light_Mantanence} alt="" />
                                     {/* right_side */}
@@ -281,10 +281,10 @@ function ProjectsPage() {
                     {/* service four */}
                     <div className="service_sec flex flex-col justify-center items-start w-full">
                         <span className='line w-6xl h-0.5 bg-amber-200 relative transition-all'><h3 className='title absolute text-center transition-all -top-4 px-2 left-5 rounded font-medium text-lg bg-amber-50'>Consulting</h3></span>
-                        <div className="cards grid grid-cols-2 mt-10 transition-all gap-5">
+                        <div className="cards grid grid-cols-1 md:grid-cols-2 mt-8 sm:mt-10 transition-all gap-4 sm:gap-5">
                             {/* card 1 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_Consulting : light_Consulting} alt="" />
                                     {/* right_side */}
@@ -299,7 +299,7 @@ function ProjectsPage() {
 
                             {/* card 2 */}
                             <div className="card flex flex-col justify-center items-center p-5 rounded shadow transition-all">
-                                <div className='serv_top_part flex justify-center items-center w-full gap-5 transition-all'>
+                                <div className='serv_top_part flex flex-col sm:flex-row justify-center items-center w-full gap-4 sm:gap-5 transition-all'>
                                     {/* .left_side */}
                                     <img className='flex-1 transition-all p-2 rounded' src={theme != 'dark' ? dark_Solution : light_Solution} alt="" />
                                     {/* right_side */}

@@ -4,11 +4,11 @@ import MyProfile from '../assets/MyPicture.jpeg'
 function ResumePage() {
     return ( 
         <>
-            <section className="Profile_Contact">
-                <div className="profile_re">
-                    <img width='1100px' src={MyProfile} alt="" />
+            <section className="Profile_Contact flex-col lg:flex-row">
+                <div className="profile_re w-full max-w-xl lg:max-w-none mx-auto">
+                    <img className="w-full max-w-full h-auto" src={MyProfile} alt="Profile" />
                 </div>
-                <div className="Contact_re transition-all ml-6">
+                <div className="Contact_re transition-all lg:ml-6 w-full max-w-xl lg:max-w-none">
                     <div className="summery transition-all">
                         <h4 className='transition-all'>Hello <span className='line transition-all'></span>----</h4>
                         <h1 className='transition-all'>I'm Software Developer</h1>
@@ -19,7 +19,7 @@ function ResumePage() {
                         design drives me to deliver high-quality solutions that make a positive impact.</p>
                         <hr className='transition-all' />
                     </div>
-                    <div className="Info_Contact transition-all">
+                    <div className="Info_Contact transition-all grid grid-cols-1 sm:grid-cols-2">
                         <div className="box transition-all">
                             <h3 className='transition-all'>Name:</h3>
                             <p className='transition-all'>Eng Cabdirahman Ibrahim Cali</p>
@@ -41,7 +41,7 @@ function ResumePage() {
                         </div>
                     </div>
 
-                    <div className="btns_re transition-all">
+                    <div className="btns_re transition-all flex flex-wrap gap-3">
                         <button className='transition-all'>Download CV</button>
                         <button className='transition-all'>Hire Me</button>
                     </div>

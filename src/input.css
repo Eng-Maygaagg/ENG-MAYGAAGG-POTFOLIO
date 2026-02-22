@@ -93,11 +93,7 @@ header {
 .link:hover::after {
     width: 100%;
 }
-@media width {
-    .link {
-        color: var(--disable-text);
-    }
-}
+/* Responsive: active link styling can be added per-route if needed */
 footer {
     background: var(--card-color);
     color: var(--text-color);
@@ -580,4 +576,34 @@ button {
 }
 .Education_Experience > .Experience > .card > p {
     color: var(--text-color-p);
+}
+
+/* ========== Responsive: Phone, Tablet, Desktop ========== */
+@media (max-width: 639px) {
+    .Skills_Review { padding: 20px 16px; }
+    .Skills_Review .skills_container { padding: 16px; gap: 12px; }
+    .preview_projects { padding: 20px 16px; }
+    .projecs_container { width: 95%; padding: 12px; }
+    .projecs_container > img:nth-child(1) { grid-column: span 1; }
+    .projecs_container > img:nth-child(2) { grid-row: span 1; }
+    .iamgeSide > .grediant_bg { width: 100%; max-width: 260px; height: 340px; }
+    .Profile_Contact { flex-direction: column; padding: 24px 16px; margin-top: 40px; gap: 24px; }
+    .Profile_Contact > .profile_re > img { max-width: 100%; }
+    .Profile_Contact > .Contact_re { margin-left: 0; }
+    .Profile_Contact > .Contact_re > .Info_Contact { grid-template-columns: 1fr; }
+    .Profile_Contact > .Contact_re > .btns_re { flex-wrap: wrap; }
+    .Education_Experience { flex-direction: column; padding: 24px 16px; gap: 20px; }
+    .Education_Experience > .h-line { width: 100%; height: 4px; }
+    .Projects_hero { background-attachment: scroll; }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+    .Skills_Review { padding: 28px 24px; }
+    .projecs_container { width: 90%; }
+    .Profile_Contact { flex-direction: column; padding: 32px 24px; gap: 32px; }
+    .Profile_Contact > .profile_re > img { max-width: 100%; }
+    .Profile_Contact > .Contact_re { margin-left: 0; }
+    .Education_Experience { flex-direction: column; padding: 32px 24px; }
+    .Education_Experience > .h-line { width: 100%; height: 4px; }
+    .Projects_hero { background-attachment: scroll; }
 }

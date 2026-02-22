@@ -22,20 +22,20 @@ import Postman from "../assets/postman.png"
 function SkillsPage() {
     return ( 
         <>
-            <section className="hero_skills flex flex-col justify-center items-center h-dvh p-20 mt-40 w-full relative ">
-                <img src={skills_hero_img} className='rounded shadow' width="85%" height="50%" alt="" />
-                <div className="skills_hero_text flex flex-col justify-center items-center p-10 rounded absolute w-[600px] h-auto shadow">
-                    <h2 className='font-semibold text-2xl tracking-wider'>My Skills</h2>
-                    <p className='font-light text-[14px] text-center mt-2 tracking-wide'>I build robust, maintainable web applications using modern JavaScript frameworks 
+            <section className="hero_skills flex flex-col justify-center items-center min-h-dvh p-4 sm:p-8 md:p-12 lg:p-20 mt-24 sm:mt-32 md:mt-40 w-full relative">
+                <img src={skills_hero_img} className='rounded shadow w-full max-w-4xl h-auto' alt="Skills" />
+                <div className="skills_hero_text flex flex-col justify-center items-center p-4 sm:p-6 md:p-10 rounded absolute w-[90%] max-w-[600px] h-auto shadow mx-auto left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+                    <h2 className='font-semibold text-lg sm:text-xl md:text-2xl tracking-wider'>My Skills</h2>
+                    <p className='font-light text-xs sm:text-[13px] md:text-[14px] text-center mt-2 tracking-wide'>I build robust, maintainable web applications using modern JavaScript frameworks 
                        and best practices. I have strong problem-solving skills and experience with frontend 
                        and backend development, including responsive design, API integration, and state management. 
                        I'm committed to continuous learning, writing clean, testable code, and collaborating effectively in agile teams.</p>
                 </div>
             </section>
 
-            <section className="skills_container flex flex-col justify-center items-center p-20 mt-20">
-                <h2 className='font-semibold text-xl tracking-wider'>Skills Set</h2>
-                <div className="skills_container flex  gap-6 w-full h-auto">
+            <section className="skills_container flex flex-col justify-center items-center p-4 sm:p-8 md:p-12 lg:p-20 mt-12 md:mt-20">
+                <h2 className='font-semibold text-lg sm:text-xl tracking-wider'>Skills Set</h2>
+                <div className="skills_container flex flex-col lg:flex-row gap-6 w-full h-auto">
                 {/* Front-End Skills Section */}
                     <div className="skills_cards mt-16 p-5">
                         <div className="top_part">
@@ -95,7 +95,7 @@ function SkillsPage() {
                 </div>
             </div>
 
-            <div className="skills_container flex  gap-6 w-full h-auto">
+            <div className="skills_container flex flex-col lg:flex-row gap-6 w-full h-auto">
             {/* Database Skills Section */}
                 <div className="skills_cards mt-3 p-5">
                     <div className="top_part">

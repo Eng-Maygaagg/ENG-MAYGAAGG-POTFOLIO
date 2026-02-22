@@ -28,7 +28,7 @@ function LayOut() {
     return ( 
         <>
         <div className='body flex flex-col transition-all scroll-auto h-auto'>
-            <button onClick={moveDown_Arrow} className="Arrow_Down fixed z-50 right-5 bottom-5 p-2 rounded-full shadow">
+            <button onClick={moveDown_Arrow} className="Arrow_Down fixed z-30 right-3 bottom-3 sm:right-5 sm:bottom-5 p-2 rounded-full shadow" aria-label="Scroll to bottom">
                 <img className="w-7 h-auto" src={theme != 'dark' ? dark_arrow_down : light_arrow_down} alt="" />
             </button>
             <header><Header /></header>
