@@ -105,6 +105,9 @@ footer .sendEmail > button{
 footer .sendEmail > button:hover {
     background-color: var(--hover-color);
 }
+.inforSide {
+    margin-right: 80px;
+}
 .inforSide > h3 {
     color: var(--muted-text);
 }
@@ -149,6 +152,7 @@ span {
     position: relative;
     overflow: hidden;
     /* background: var(--focus-color); */
+    margin-right: 80px;
 }
 .iamgeSide > .grediant_bg::after {
     content: '';
@@ -578,7 +582,6 @@ button {
     color: var(--text-color-p);
 }
 
-/* ========== Responsive: Phone, Tablet, Desktop ========== */
 @media (max-width: 639px) {
     .Skills_Review { padding: 20px 16px; }
     .Skills_Review .skills_container { padding: 16px; gap: 12px; }
@@ -598,6 +601,7 @@ button {
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
+    header > .Header_Btns > button { display: none; }
     .Skills_Review { padding: 28px 24px; }
     .projecs_container { width: 90%; }
     .Profile_Contact { flex-direction: column; padding: 32px 24px; gap: 32px; }
@@ -606,4 +610,10 @@ button {
     .Education_Experience { flex-direction: column; padding: 32px 24px; }
     .Education_Experience > .h-line { width: 100%; height: 4px; }
     .Projects_hero { background-attachment: scroll; }
+}
+
+@media (min-width: 1030px) {
+    .menu-button {
+        display: none !important;
+    }
 }

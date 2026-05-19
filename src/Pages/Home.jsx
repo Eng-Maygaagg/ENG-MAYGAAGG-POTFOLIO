@@ -45,7 +45,7 @@ function HomePage() {
             </div>
             <div className="iamgeSide flex-1 animate__animated animate__fadeInUp animate__delay-1s order-1 md:order-2 flex justify-center md:justify-end">
                 <div className="grediant_bg rounded mx-auto md:mx-0">
-                    <img className="ml-4 mr-4 md:ml-6 md:mr-5 z-10 rounded w-full max-w-[240px] sm:max-w-[280px] md:max-w-[300px] h-auto" src={MyPicture} alt="Me" />
+                    <img className="ml-4 mr-4 md:ml-[42px] md:mr-10 z-10 rounded w-full max-w-[240px] sm:max-w-[280px] md:max-w-[300px] h-auto" src={MyPicture} alt="Me" />
                 </div>
             </div>
             <div className="social_media hidden md:flex md:mr-4 flex-col justify-center items-center gap-2.5 order-3">
@@ -60,41 +60,41 @@ function HomePage() {
 
         {/* Skils Review Section */}
     <section className="Skills_Review flex flex-col p-4 sm:p-6 md:p-8 transition-all">
-        <h2 className="font-medium text-base sm:text-[18px] tracking-wider transition-all">Preview Skills</h2>
-        <div className="skills_container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 transition-all p-4 sm:p-6 md:p-8 mt-4 sm:mt-7 rounded">
-            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
+        <h2 className="font-medium text-base sm:text-[18px] tracking-wider transition-all animate__animated animate__fadeInUp">Preview Skills</h2>
+        <div className="skills_container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 transition-all p-4 sm:p-6 md:p-8 mt-4 sm:mt-7 rounded animate__animated animate__fadeInUp animate__delay-0.2s">
+            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded animate__animated animate__fadeInUp animate__delay-0.3s">
                 <img className="w-8 h-auto" src={HTML} alt="HTML" />
                 <p className="font-light mt-0.5">HTML</p>
             </div>
-            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
+            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded animate__animated animate__fadeInUp animate__delay-0.4s">
                 <img className="w-8 h-auto" src={CSS} alt="CSS" />
                 <p className="font-light mt-0.5">CSS</p>
             </div>
-            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
+            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded animate__animated animate__fadeInUp animate__delay-0.5s">
                 <img className="w-8 h-auto" src={JS} alt="JavaSript" />
                 <p className="font-light mt-0.5">JavaSript</p>
             </div>
-            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
+            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded animate__animated animate__fadeInUp animate__delay-0.6s">
                 <img className="w-8 h-auto" src={TailwindCSS} alt="TailwindCSS" />
                 <p className="font-light mt-0.5">TailwindCSS</p>
             </div>
-            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
+            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded animate__animated animate__fadeInUp animate__delay-0.7s">
                 <img className="w-8 h-auto" src={ReactJs} alt="react js" />
                 <p className="font-light mt-0.5">React Js</p>
             </div>
-            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
+            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded animate__animated animate__fadeInUp animate__delay-0.8s">
                 <img className="w-8 h-auto" src={NodeJs} alt="Node js" />
                 <p className="font-light mt-0.5">Node Js</p>
             </div>
-            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
+            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded animate__animated animate__fadeInUp animate__delay-0.9s">
                 <img className="w-8 h-auto" src={ExpressJs} alt="Express js" />
                 <p className="font-light mt-0.5">Express Js</p>
             </div>
-            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
+            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded animate__animated animate__fadeInUp animate__delay-1s">
                 <img className="w-8 h-auto" src={MongoDB} alt="MongoDB" />
                 <p className="font-light mt-0.5">MongoDB</p>
             </div>
-            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
+            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded animate__animated animate__fadeInUp animate__delay-1.1s">
                 <img className="w-8 h-auto" src={PHP} alt="php" />
                 <p className="font-light mt-0.5">PHP</p>
             </div>
@@ -102,7 +102,7 @@ function HomePage() {
                 <img className="w-8 h-auto" src={SQL} alt="sql" />
                 <p className="font-light">SQL Server</p>
             </div> */}
-            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded">
+            <div className="card flex flex-col justify-center items-center transition-all p-6 gap-2 rounded animate__animated animate__fadeInUp animate__delay-1.2s">
                 <Link to='/skills'><p className="semore_skills">See more...</p></Link>
             </div>
         </div>
@@ -110,14 +110,14 @@ function HomePage() {
 
     {/* Preview Projects */}
     <section className="preview_projects flex flex-col transition-all px-4 sm:px-6">
-        <h2 className="font-medium text-base sm:text-[18px] tracking-wider transition-all">Preview Projects</h2>
-        <div className="projecs_container grid grid-cols-1 sm:grid-cols-2 mt-4 gap-3 sm:gap-4 rounded w-full max-w-4xl mx-auto">
-            <img src={project1} alt="Project 1" className="w-full h-auto rounded" />
-            <img src={project2} alt="Project 2" className="w-full h-auto rounded" />
-            <img src={project3} alt="Project 3" className="w-full h-auto rounded" />
-            <img src={project4} alt="Project 4" className="w-full h-auto rounded" />
+        <h2 className="font-medium text-base sm:text-[18px] tracking-wider transition-all animate__animated animate__fadeInUp">Preview Projects</h2>
+        <div className="projecs_container grid grid-cols-1 sm:grid-cols-2 mt-4 gap-3 sm:gap-4 rounded w-full max-w-4xl mx-auto animate__animated animate__fadeInUp animate__delay-0.2s">
+            <img src={project1} alt="Project 1" className="w-full h-auto rounded animate__animated animate__fadeInUp animate__delay-0.3s" />
+            <img src={project2} alt="Project 2" className="w-full h-auto rounded animate__animated animate__fadeInUp animate__delay-0.4s" />
+            <img src={project3} alt="Project 3" className="w-full h-auto rounded animate__animated animate__fadeInUp animate__delay-0.5s" />
+            <img src={project4} alt="Project 4" className="w-full h-auto rounded animate__animated animate__fadeInUp animate__delay-0.6s" />
         </div>
-        <button className="mt-6 sm:mt-8 px-6 sm:px-8 py-2 rounded shadow text-sm sm:text-base"><Link to='/projects'>See More Projects</Link></button>
+        <button className="mt-6 sm:mt-8 px-6 sm:px-8 py-2 rounded shadow text-sm sm:text-base animate__animated animate__fadeInUp animate__delay-0.7s"><Link to='/projects'>See More Projects</Link></button>
     </section>
         </>
      );

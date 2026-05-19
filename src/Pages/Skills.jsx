@@ -22,7 +22,7 @@ import Postman from "../assets/postman.png"
 function SkillsPage() {
     return ( 
         <>
-            <section className="hero_skills flex flex-col justify-center items-center min-h-dvh p-4 sm:p-8 md:p-12 lg:p-20 mt-24 sm:mt-32 md:mt-40 w-full relative">
+            <section className="hero_skills flex flex-col justify-center items-center min-h-dvh p-4 sm:p-8 md:p-12 lg:p-20 mt-16 sm:mt-32 md:mt-20 w-full relative">
                 <img src={skills_hero_img} className='rounded shadow w-full max-w-4xl h-auto' alt="Skills" />
                 <div className="skills_hero_text flex flex-col justify-center items-center p-4 sm:p-6 md:p-10 rounded absolute w-[90%] max-w-[600px] h-auto shadow mx-auto left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
                     <h2 className='font-semibold text-lg sm:text-xl md:text-2xl tracking-wider'>My Skills</h2>
@@ -39,7 +39,7 @@ function SkillsPage() {
                 {/* Front-End Skills Section */}
                     <div className="skills_cards mt-16 p-5">
                         <div className="top_part">
-                            <h3 className='font-medium text-xl mb-1 tracking-wider'>Front-End Skills</h3>
+                            <h3 className='font-semibold text-xl mb-1 tracking-wider'>Front-End Skills</h3>
                             <p className='font-light text-[16px] tracking-wide'>I use <strong className='font-semibold'>HTML, CSS, JavaScript, React,</strong> and <strong className='font-semibold'>Tailwind CSS</strong> to 
                            build responsive, accessible, and interactive front-end applications.</p>
                         </div>
@@ -70,7 +70,7 @@ function SkillsPage() {
                 {/* Back-End Skills Section */}
                 <div className="skills_cards mt-16 p-5">
                     <div className="top_part">
-                        <h3 className='font-medium text-xl mb-1 tracking-wider'>Back-End Skills</h3>
+                        <h3 className='font-semibold text-xl mb-1 tracking-wider'>Back-End Skills</h3>
                         <p className='font-light text-[16px] tracking-wide'>I work with back-end technologies such as <strong className='font-semibold'>Node.js</strong>, <strong className='font-semibold'>Express.js</strong>, <strong className='font-semibold'>PHP</strong>, <strong className='font-semibold'>Java</strong>, 
                                 and others to build scalable server-side applications and APIs.</p>
                     </div>
@@ -99,7 +99,7 @@ function SkillsPage() {
             {/* Database Skills Section */}
                 <div className="skills_cards mt-3 p-5">
                     <div className="top_part">
-                        <h3 className='font-medium text-xl mb-1 tracking-wider'>Database Skills</h3>
+                        <h3 className='font-semibold text-xl mb-1 tracking-wider'>Database Skills</h3>
                         <p className='font-light text-[16px] tracking-wide'>I work with database technologies like <strong className='font-semibold'>MongoDB</strong> and <strong className='font-semibold'>SQL</strong> to build scalable, 
                                 data-driven backend systems and APIs.</p>
                     </div>
@@ -118,7 +118,7 @@ function SkillsPage() {
                  {/* Tool & Technologies Skills Section */}
                 <div className="skills_cards mt-3 p-5">
                     <div className="top_part">
-                        <h3 className='font-medium text-xl mb-1 tracking-wider'>Tools & Technologies</h3>
+                        <h3 className='font-semibold text-xl mb-1 tracking-wider'>Tools & Technologies</h3>
                         <p className='font-light text-[16px] tracking-wide'>I use tools like <strong className='font-semibold'>Git, GitHub, Postman,</strong> and other technologies 
                                 to enhance development workflow and collaboration.</p>
                     </div>

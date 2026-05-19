@@ -25,15 +25,11 @@ const Header = () => {
                     <Link className="link font-medium transition-all" to='/resume' onClick={() => setMenuOpen(false)}>Resume</Link>
                     <Link className="link font-medium transition-all" to='/contact' onClick={() => setMenuOpen(false)}>Contacts</Link>
                 </nav>
-                <div className="flex items-center gap-3">
+                <div className="Header_Btns flex items-center gap-3">
                     <img onClick={() => toggleTheme()} className="size-5 sm:size-6 hover:scale-105 cursor-pointer transition-all" src={theme !== "dark" ? moon : sun} alt="theme-toggle" />
                     <button
-                        type="button"
-                        className="hidden max-lg:inline-flex p-2 rounded-md hover:opacity-80 [color:var(--text-color)] transition-all items-center justify-center md:hidden"
-                        onClick={() => setMenuOpen(!menuOpen)}
-                        aria-label="Toggle menu"
-                    >
-                     <img src={theme == 'dark' ? Light_Menu : Dark_Menu} width="30px" height="30px" alt="" /> 
+                        type="button"  className="menu-button none max-lg:inline-flex p-2 rounded-md hover:opacity-80 [color:var(--text-color)] transition-all items-center justify-center md:hidden" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+                     <img className="Menu_Btn" src={theme == 'dark' ? Light_Menu : Dark_Menu} width="30px" height="30px" alt="" /> 
                     </button>
                 </div>
             </header>
